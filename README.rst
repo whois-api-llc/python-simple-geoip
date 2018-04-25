@@ -3,6 +3,8 @@ python-simple-geoip
 
 The simplest possible way to get IP geolocation information in Python.
 
+.. image:: https://raw.githubusercontent.com/whois-api-llc/python-simple-geoip/master/images/geoip.png
+
 .. image:: https://img.shields.io/pypi/v/simple-geoip.svg
     :alt: python-simple-geoip Release
     :target: https://pypi.python.org/pypi/simple-geoip
@@ -10,8 +12,6 @@ The simplest possible way to get IP geolocation information in Python.
 .. image:: https://img.shields.io/travis/whois-api-llc/python-simple-geoip.svg
     :alt: python-simple-geoip Build
     :target: https://travis-ci.org/whois-api-llc/python-simple-geoip
-
-.. image:: https://raw.githubusercontent.com/whois-api-llc/python-simple-geoip/master/images/geoip.png
 
 
 Meta
