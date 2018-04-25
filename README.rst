@@ -38,7 +38,7 @@ If you haven't done this yet, please do so now.
 Installation
 ------------
 
-To install ``simple-geoip`` using `npm <https://www.npmjs.org/>`_, simply run:
+To install ``simple-geoip`` using `pypi <https://pypi.org/>`_, simply run:
 
 .. code-block:: console
 
