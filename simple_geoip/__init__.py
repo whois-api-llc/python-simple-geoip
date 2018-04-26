@@ -13,4 +13,4 @@ __license__ = 'UNLICENSE'
 __version__ = '0.1.0'
 
 
-from .simple_geoip import GeoIP
+from .geoip import GeoIP
