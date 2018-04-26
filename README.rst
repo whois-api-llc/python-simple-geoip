@@ -56,13 +56,24 @@ you can use in your application in any number of ways.
 
 .. code-block:: python
 
-    const GeoIP = require("simple-geoip");
+    from simple_geoip import GeoIP
 
-    let geoIP = new GeoIP("your-api-key");
-    geoIP.lookup("8.8.8.8", (err, data) => {
-      if (err) throw err;
-      console.log(data);
-    });
+    geoip = GeoIP("your-api-key");
+
+    try:
+        data = geoip.lookup("8.8.8.8")
+    except ConnectionError:
+        # If you get here, it means you were unable to reach the geoipify
+        # service, most likely because of a network error on your end.
+    except ServiceError:
+        # If you get here, it means geoipify is having issues, so the request
+        # couldn't be completed :(
+    except:
+        # Something else happened (non-geoipify) related. Maybe you hit CTRL-C
+        # while the program was running, the kernel is killing your process, or
+        # something else all together.
+
+    print(data)
 
 Here's the sort of data you might get back when performing a geoip lookup
 request:
@@ -83,19 +94,8 @@ request:
     }
 
 By default, this library handles retrying failed HTTP requests for you. For
-instance: if the geoip API service is currently down or having issues,
-your request will be retried up to five consecutive times before failing.
-
-This can add more request time, and may not be what you want in all cases.
-
-If you'd prefer to lower the amount of retries that this library will perform on
-your behalf, you can pass in a ``retries`` option like so:
-
-.. code-block:: python
-
-    const GeoIP = require("simple-geoip");
-
-    let geoIP = new GeoIP("your-api-key", { retries: 2 });
+instance: if the GeoIPify API service is currently down or having issues,
+your request will be retried up to three consecutive times before failing.
 
 
 Changelog
@@ -107,6 +107,6 @@ All library changes in descending order.
 Version 0.1.0
 *************
 
-**Released April 30, 2018.**
+**Released April 26, 2018.**
 
 - First release!
