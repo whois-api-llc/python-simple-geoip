@@ -6,6 +6,9 @@ node_js:
 - '3.5'
 - '3.6'
 - '3.7'
-- 'pypy'
+- pypy
 install: pip install -e .
 script: python setup.py test
+env:
+  global:
+    secure: ZPqxsnQgdW6h8mLn9abDhZa5YAkdJ2dcxcpr1C0o7JE7y/QTjk9YZXv2tjNMv8R6TPUbaLZsb7SROuWyFSO2II9/ILLiFGCVQUrDS1ko3mYRZ3bWQMWezt2LBcpb84yles4khCwM7uHf2ml5MnIMhKMaae4FCs8BOE6eP/D6YHYGBvB+Qq+k3u7LI7OYzxnpGzaDEo64ACAPbijWOoHU5cwCn46SRKdkaNi2BUUQLxP8dg6IMMNw3lGb2K4REObIFajwHUz3Yn/BOlZQA8ADVWyaW+nIWSfKK0A6VrZRiMzPixxneIO8JOJHbLNOewrWD/7qUloF1mbKvH2Y/zFLjwkj3DivIp5iO6t8KhWlDjXc+jgqcIXnhgtHha9hZKdcgslURconBFhi49DCRUTAL3SXZBr0T6kOjWXi3vl2UpWiXMf2xOVxE8ip4FjTLrXWBa1jrR46nCGBzBdE2nZjzI9CNSrBWsR/K3weDQYBCs5i5f9F9UARDbEiDqHD8Dot40HR+KWp+fcV7tqxSoZBmMzWhk/PWwMbWwyuOqrVkQqTN5PL081L5YKu5emUQuMgaBcihB4zT9MV7pMh+16iki8FdEL/pXUPD4hETeSRR6qDQdH8QWkiDFCasrMwc2C8rVaxboInx9gomL5WHwevER7NvX/FRymbls9Fm+I0py0=
