@@ -10,7 +10,7 @@ https://geoipify.whoisxmlapi.com/
 
 __author__ = 'Randall Degges'
 __license__ = 'UNLICENSE'
-__version__ = '0.1.0'
+__version__ = '0.1.1'
 
 
 from .geoip import GeoIP

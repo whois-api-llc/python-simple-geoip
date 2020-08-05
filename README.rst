@@ -103,6 +103,15 @@ Changelog
 
 All library changes in descending order.
 
+Version 0.1.1
+*************
+
+**August 4, 2020**
+
+WhoisXML API Tech Support has fixed issues due to obsolete
+commands. It is now Python 3.8 compatible, and has been also tested
+with Python 3.6 and 2.7.
+
 
 Version 0.1.0
 *************

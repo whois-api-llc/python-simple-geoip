@@ -67,4 +67,4 @@ class GeoIPLookupTest(BaseTest):
         simple_geoip.geoip.API_URI = 'https://geoipify.whoisxmlapi.com/api/v1'
         geoip = simple_geoip.GeoIP(environ.get('API_KEY'))
 
-        self.assertEquals(geoip.lookup('8.8.8.8')['ip'], '8.8.8.8')
+        self.assertEqual(geoip.lookup('8.8.8.8')['ip'], '8.8.8.8')
