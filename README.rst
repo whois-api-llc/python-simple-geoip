@@ -27,8 +27,8 @@ Meta
 Prerequisites
 -------------
 
-To use this library, you'll need to create a free GeoIPify account:
-https://geoipify.whoisxmlapi.com/
+To use this library, you'll need to create a free IP Geolocation account:
+https://ip-geolocation.whoisxmlapi.com/
 
 If you haven't done this yet, please do so now.
 
@@ -58,24 +58,24 @@ you can use in your application in any number of ways.
 
     from simple_geoip import GeoIP
 
-    geoip = GeoIP("your-api-key");
+    ip = GeoIP("your-api-key");
 
     try:
-        data = geoip.lookup("8.8.8.8")
+        data = ip.lookup("8.8.8.8")
     except ConnectionError:
-        # If you get here, it means you were unable to reach the geoipify
+        # If you get here, it means you were unable to reach the IP Geolocation
         # service, most likely because of a network error on your end.
     except ServiceError:
-        # If you get here, it means geoipify is having issues, so the request
+        # If you get here, it means IP Geolocation is having issues, so the request
         # couldn't be completed :(
     except:
-        # Something else happened (non-geoipify) related. Maybe you hit CTRL-C
+        # Something else happened (non-IP Geolocation) related. Maybe you hit CTRL-C
         # while the program was running, the kernel is killing your process, or
         # something else all together.
 
     print(data)
 
-Here's the sort of data you might get back when performing a geoip lookup
+Here's the sort of data you might get back when performing a IP Geolocation lookup
 request:
 
 .. code-block:: json
@@ -94,7 +94,7 @@ request:
     }
 
 By default, this library handles retrying failed HTTP requests for you. For
-instance: if the GeoIPify API service is currently down or having issues,
+instance: if the IP Geolocation API service is currently down or having issues,
 your request will be retried up to three consecutive times before failing.
 
 
